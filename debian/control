@@ -1,0 +1,25 @@
+Source: ruby-async-io
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Hideki Yamane <henrich@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb (>= 1),
+               ruby-async,
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-async-io.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-async-io
+Homepage: https://github.com/socketry/async-io
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-async-io
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${misc:Depends},
+         ${ruby:Depends},
+         ${shlibs:Depends}
+Description: Provides support for asynchronous TCP, UDP, UNIX and SSL sockets
+ Async::IO provides builds on async and provides asynchronous wrappers for
+ IO, Socket, and related classes.
